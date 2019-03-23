@@ -8,7 +8,7 @@ int main() {
     std::cout << "int " << sizeof(int) << endl;
     std::cout << "float " << sizeof(float) << endl;
     std::cout << "double " << sizeof(double) << endl;
-    std::cout << "void " << sizeof(void) << endl;
+    std::cout << "void " << sizeof(void) << endl; // this gives a warning
     std::cout << "wide char " << sizeof(wchar_t) << endl;
 
     /* type modifiers (can combine):
@@ -17,8 +17,9 @@ int main() {
     */
     std::cout << "long double " << sizeof(long double) << endl;
     // std::cout << "signed float" << sizeof(signed float) << endl; // not allowed
+
     unsigned int x = -10; // this will overflow to positives
-    signed int y = -10;
+    signed int y = -10; // this works
     cout << x << endl;
     cout << y << endl;
     return 0;
